@@ -1,14 +1,503 @@
 <!doctype html>
+<html lang="en">
 
-<html>
-  <head>
-    <title>INSERT TITLE HERE!</title>
-    <link rel="stylesheet" href="index.css">
-    <!-- TODO: add additional links here! e.g. fonts, icons, more stylesheets, etc. -->
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Personas and Storyboarding</title>
+</head>
 
-  <body>
-    <!-- TODO: put your HTML code here! -->
-  </body>
+<body>
+
+
+  <div class="d-flex flex-column justify-content-center align-items-center top-pane">
+    <h1 class="text-light display-1">Personas and Storyboarding</h1>
+  </div>
+
+  <div id="overview" class="container-fluid text-center pb-5">
+    <h3>An Overview</h3>
+    <div class="container">
+      <p class="lead">
+        When you wake up tired in the morning, wouldn't it be nice to have a freshly-brewed cup of coffee ready to go?
+        One coffee maker tries to address exactly that. By pre-setting a brew time and loading the necessary ingredients
+        beforehand,
+        you can have this coffee maker brew your cup at the perfect time.
+        While this may be nice, is the interface well-designed enough to actually use?
+      </p>
+    </div>
+
+  </div>
+
+  <div id="interface" class="container-fluid bg-white text-center pb-5">
+    <h3>The Interface</h3>
+    <div class="container">
+      <p class="lead">
+        Let's take a look at some sketches of the coffee maker.
+      </p>
+      <figure class="figure">
+        <img class="img-fluid" src="./images/coffee-maker-sketch-cropped-top.jpg" alt="a sketch of the coffee maker">
+        <figcaption class="figure-caption">
+          <ol type="A" class="text-left">
+            <li>Single-serve dispensing</li>
+            <li>Display</li>
+            <li>Carafe dispensing</li>
+            <li>Load water/ground coffee for single-serve</li>
+            <li>Load water for carafe</li>
+            <li>Load ground coffee for carafe</li>
+          </ol>
+        </figcaption>
+      </figure>
+
+      <p class="lead">
+        The coffee maker is able to produce coffee in two batch sizes: single-serve and carafe (multiple servings).
+        It's important to note that the machine separates slots for loading in ground coffee and water for both batch
+        sizes.
+      </p>
+      <p class="lead">
+        For the purposes of this project, we'll also be paying particularly close attention to the display (labeled B).
+      </p>
+      <figure class="figure">
+        <img class="img-fluid" src="./images/coffee-maker-sketch-cropped-bottom.jpg"
+          alt="a sketch of the coffee maker display">
+      </figure>
+      <p class="lead">
+        As you can see, the display has multiple buttons, a screen, and a switch. The HOUR and MINUTE
+        buttons allow for adjusting the time and BREW OPTIONS allows users to select "bold" or "reg" brew. The PROGRAM
+        button performs various functions necessary for toggling on the auto-brew
+        feature, and it also has an indicator light to signal that the auto-brew feature is set. The switch allows users
+        to choose a batch size, and the BREW NOW button starts and cancels a brew immediately.
+      </p>
+      <p class="lead">
+        The problem that the interface is trying to solve is how to allow the users to quickly and intuitively preset a
+        brew time and load the necessary ingredients to brew a cup of coffee.
+      </p>
+    </div>
+  </div>
+
+  <div id="observations" class="container-fluid text-center pb-5">
+    <h3>Some Observations</h3>
+    <div class="container text-left">
+      <p class="lead">
+        For my observations, I asked a few friends to preset a time to brew a carafe of coffee. To do so, the interface
+        requires them
+        to:
+      </p>
+
+      <ol type="1" class="text-left">
+        <li>Load water into E (from the diagram above).</li>
+        <li>Load coffee grounds into F.</li>
+        <li>Press and hold PROGRAM while simultaneously adjusting the time with the HOUR and
+          MINUTE buttons.</li>
+        <li>And then press PROGRAM again to turn on the auto-brew, which will turn on the indicator light, meaning
+          they've successfully preset a brew time.
+        </li>
+      </ol>
+    </div>
+    <div class="container-sm">
+      <div class="row px-md-3 px-lg-5 pt-3 pt-md-5">
+        <div class="mb-4">
+          <div class="card h-100">
+            <div class="card-header">
+              <h4>Sophia</h4>
+            </div>
+            <div class="card-body">
+              <div class="card-text text-left">
+                <ul>
+                  <li>Having load the ground coffee, she goes to load the water. Instead of loading it in slot E (for
+                    carafe), she pours it into slot D (for single-serve).
+                  </li>
+                  <li>She presses BREW OPTIONS multiple times and soon realizes that it does not function to set the
+                    preset time.</li>
+                  <li>She presses PROGRAM and nothing happens. She then presses and holds it, which brings up
+                    the
+                    preset time.
+                    She releases it and it goes away.
+                  </li>
+                  <li>She figures she needs to press and hold PROGRAM while simultaneously adjusting the clock to set
+                    the auto-brew.</li>
+                  <li>Having set the auto-brew time, she is unsure if it will actually brew, saying
+                    "Did that do anything? I don't see anything changing".
+                  </li>
+                  <li>When the time passes and it does not brew, she presses PROGRAM to once again set the brew time.
+                    This, however, turns on the indicator light.
+                  </li>
+                  <li>
+                    Realizing that this must be how auto-brew is set, she readjusts the time as before, and this time
+                    makes sure to press PROGRAM again to turn on indicator light.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mb-4">
+          <div class="card h-100">
+            <div class="card-header">
+              <h4>Ethan</h4>
+            </div>
+            <div class="card-body">
+              <div class="card-text text-left">
+                <ul>
+                  <li>
+                    Like Sophia, Ethan pours water into the slot for single-serve instead of for carafe.
+                  </li>
+                  <li>
+                    He presses PROGRAM. This does nothing.
+                  </li>
+                  <li>
+                    So, he then cycles through all the other buttons, and could not find where he can set the
+                    preset time. He gives up after ~2 minutes and asks for my help. I direct him to hold
+                    PROGRAM.
+                  </li>
+                  <li>
+                    After he does this, he notices that the screen time changes, so he attempts to adjust it via the
+                    HOUR
+                    and MINUTE buttons.
+                    As he does not hold PROGRAM while doing this, the preset time doesn't change.
+                  </li>
+                  <li>
+                    He asks for my help again, and I direct him to hold PROGRAM while simultaneously adjusting the
+                    time.
+                    He then adjusts the preset time.
+                  </li>
+                  <li>
+                    He then presses PROGRAM again, which turns on the indicator light and confirms the preset. Later, he
+                    would tell me he did
+                    this accidentally.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mb-4">
+          <div class="card h-100">
+            <div class="card-header">
+              <h4>Jori</h4>
+            </div>
+            <div class="card-body">
+              <div class="card-text text-left">
+                <ul>
+                  <li>
+                    Unlike Sophia and Ethan, Jori pours the water into the correct place.
+                  </li>
+                  <li>
+                    Before going further, he plays around with the buttons to "know what does what".
+                  </li>
+                  <li>
+                    He presses PROGRAM and it does nothing.
+                  </li>
+                  <li>
+                    He presses BREW OPTIONS repeatedly, and it does nothing helpful for setting brew time.
+                  </li>
+                  <li>
+                    He presses and holds BREW NOW, which only immediately begins brewing instead of setting a time.
+                  </li>
+                  <li>
+                    However, he realizes he can try holding PROGRAM, thus toggling the
+                    preset brew time.
+                  </li>
+                  <li>
+                    He adjusts the time while holding PROGRAM, which allows him to change preset time.
+                  </li>
+                  <li>
+                    After this, he is unsure whether the brew will start on its own as he expects it to. However, he
+                    notices the indicator light
+                    and presses PROGRAM again. This then confirms the auto-brew is set.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="interviews" class="container-fluid alternate-color text-center pb-5">
+    <h3>The Interviews</h3>
+    <div class="container text-left">
+      <p class="lead">After observing the participants, I interviewed them about their experience. Some questions
+        included:
+      </p>
+      <ul>
+        <li>Have you had prior experience operating a coffee making machine?</li>
+        <li>Have you used products with similar interfaces? If so, in what applications?</li>
+        <li>Was there any aspect of the interface you found initially confusing? If so, which aspects?</li>
+        <li>On a scale of 1 to 6 (1 = not difficult at all, 6 = very difficult) how would you rate the
+          difficulty of
+          learning how to use the interface to preset the brew time?
+        </li>
+        <li>Did you have difficulties with the task? If so,
+          <ul>
+            <li>Please describe the difficulty.</li>
+            <li>How did you resolve it, if you resolved it?</li>
+          </ul>
+        </li>
+        <li>On a scale of 1 to 6 (1 = always, 6 = never), how often did an action (ex. pressing HOUR button) lead to an
+          outcome you expected?</li>
+        <li>Did any action(s) lead to an outcome you did not expect? If so,
+          <ul>
+            <li>What action(s)?</li>
+            <li>What outcome did you expect?</li>
+            <li>What was the actual outcome?</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="row px-md-3 px-lg-5 pt-3 pt-md-5 justify-content-center">
+      <div class="col-md-6 col-xl-5 col-xxl-4 mb-4">
+        <div class="card h-100">
+          <div class="card-header">
+            <h4>Sophia</h4>
+          </div>
+          <div class="card-body">
+            <div class="card-text">
+              <p>
+                Despite having operated coffee machines before, Sophia says she struggled with this one,
+                particularly when loading water for carafe brewing. She asks rhetorically, "Where the heck was I
+                supposed
+                to put in the water"?
+                Also, while she did manage to preset the brew time, she was unsure if it was actually on or not. She
+                says she did
+                not see the indicator light.
+                Rating the difficulty of the interface, she gives it a 4, meaning somewhat difficult. She attributes
+                this to the straightforwardness
+                of most of the buttons with the
+                exception of PROGRAM. She also says that her actions usually produced outcomes that aligned with what
+                she
+                expected. The notable exception
+                would be, again, the PROGRAM button, which did nothing when she pressed it the first time.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-xl-5 col-xxl-4 mb-4">
+        <div class="card h-100">
+          <div class="card-header">
+            <h4>Ethan</h4>
+          </div>
+          <div class="card-body">
+            <div class="card-text">
+              <p>
+                Like Sophia, Ethan has operated coffee machines in the past, which have similar interfaces with
+                this one. Ethan notes that he did not find most of the buttons confusing, but he was very confused with
+                where
+                to load in the water. Like Sophia, he also poured water into the wrong
+                location. He says that
+                "the whole set timer thing was new to me", which would explain why he gave the interface a high
+                difficulty rating
+                of 5. Further, he explains that, while most of the interface worked as expected, the PROGRAM button was
+                "weird". He would not have intuitively known to hold onto PROGRAM while simultaneously adjusting time if
+                I had not helped him.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-xl-5 col-xxl-4 mb-4">
+        <div class="card h-100">
+          <div class="card-header">
+            <h4>Jori</h4>
+          </div>
+          <div class="card-body">
+            <div class="card-text">
+              <p>
+                Unlike Ethan and Sophia, Jori has never operated a coffee machine. Despite this, he was the
+                only participant to pour water into the correct location for carafe brew. He attributes this to having
+                played around with the machine before doing anything. He gives the interface difficulty a rating of 2,
+                indicating it was fairly straightforward for him. When asked about any difficulties, like the other two
+                participants,
+                he says he had a bit of trouble with the PROGRAM button, adding that it's "not labeled as it should be".
+                Instead, he offers
+                that it should be labeled "PRESET BREW". He notes that all actions had the expected outcome, but
+                "PROGRAM gave me a little bit of trouble".
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="personas" class="container-fluid text-center pb-5">
+    <h3>Meet the Personas</h3>
+    <div class="container">
+      <h4>Studious Susie</h4>
+      <p class="lead">Meet Studious Susie, a 20-year-old junior at Brown. As her name implies, Susie studies hard
+        so that she can excel in her schoolwork. Like many students, Susie best manages her
+        time by carefully planning out her schedule in advance. She notices that every morning she spends a little too
+        much time brewing coffee, and would rather spend it getting ready for classes.
+      </p>
+    </div>
+    <div class="container-smaller center-img">
+      <img class="img-fluid" src="./images/empathy-maps/Slide1.JPG" alt="Studious Susie's empathy map">
+
+    </div>
+    <div class="container pb-5">
+      <p class="lead">
+        One interface problem that Susie faces is that she can sometimes accidentally forget to preset
+        the brew the night before. This is very inconvenient for her since she likes a tidy schedule. She also
+        sometimes may pour water into the wrong place or set the wrong time, especially if she's super tired
+        from a long day of schoolwork.
+      </p>
+      <p class="lead">
+        Susie embodies the typical user of this interface. In addition to being part of a demographic that is a major
+        consumer
+        of coffee (college students), she is also the type of person who looks for ways to save some time when they can.
+        Like many other users, she values the convenience of having her coffee on demand, even
+        if she has to put in a little work beforehand.
+      </p>
+    </div>
+
+    <div class="container">
+      <h4>Care-free Cory</h4>
+      <p class="lead">
+        Meet Care-free Cory, a 27-year-old civil engineer for a construction firm based in Boston. Having gone through
+        the
+        gruel of college
+        and landed his dream job, he's enjoying the big-city life. You can say he's pretty care-free. After
+        early morning jogs, he brews a
+        pot of coffee while freshening up for work. However, he isn't too happy that by the time he's done
+        cleaning up, the coffee has usually
+        gotten lukewarm.
+      </p>
+    </div>
+
+    <div class="container-smaller center-img">
+      <img class="img-fluid" src="./images/empathy-maps/Slide2.JPG" alt="Carefree Cory's empathy map">
+
+    </div>
+    <div class="container pb-5">
+      <p class="lead">
+        One interface problem that Cory is that, like Susie, he may sometimes just forget to preset the brew, which
+        could
+        certainly disrupt his schedule. Another problem is that he may forget to actually turn on the preset brew
+        because
+        he neglects to make sure the indicator light is on. When he goes to grab his coffee, he'll be in for a shock to
+        see that his brew never started like he expected. He'll have to weigh these potential costs with
+        the benefits.
+      </p>
+      <p class="lead">
+        Cory embodies the typical user of this interface. Like Susie, he is part of a major demographic that would
+        utilize
+        this interface (busy young adult). Unlike Susie, however, he is not necessarily seeking
+        to improve his morning efficiency (he thinks he's already got that down), but he's looking for ways to keep his
+        brew fresher and hotter for longer.
+        Many users would easily relate to this, since many folks seek to get the most out of their cup of joe.
+        The hotter the better.
+      </p>
+    </div>
+
+  </div>
+
+  <div id="storyboard" class="container-fluid bg-white text-center pb-5">
+    <h3>Making Coffee: A Story(board)</h3>
+    <div class="container">
+      <p class="lead">
+        Let's take a look at Susie as she tries to use the interface. Hopefully, we can glean
+        whatever problems she has with it, and see if it gets her towards her goal of
+        saving some time every morning.
+      </p>
+      <div class="row px-md-3 px-lg-5 pt-3 justify-content-center">
+        <div class="col-md-6 col-xl-5 col-xxl-4">
+          <figure class="figure">
+            <img class="img-fluid" src="./images/storyboard-p1.jpg" alt="Susie finishes her project!">
+            <figcaption class="figure-caption">
+              Yay! Susie finally finished up her super huge project! She is super tired, though.
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-md-6 col-xl-5 col-xxl-4">
+          <figure class="figure">
+            <img class="img-fluid" src="./images/storyboard-p2.jpg" alt="Susie fills a glass of water.">
+            <figcaption class="figure-caption">
+              It's time for her to prepare her coffee for the morning. First, she goes to fetch some water for
+              the brew.
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-md-6 col-xl-5 col-xxl-4">
+          <figure class="figure">
+            <img class="img-fluid" src="./images/storyboard-p3.jpg" alt="Susie pours water into the coffee machine.">
+            <figcaption class="figure-caption">
+              She pours the water into the coffee machine, making sure to pour it in the right slot for carafe brew!
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-md-6 col-xl-5 col-xxl-4">
+          <figure class="figure">
+            <img class="img-fluid" src="./images/storyboard-p4.jpg"
+              alt="Susie adjusts the preset time for the auto-brew.">
+            <figcaption class="figure-caption">
+              She sets the preset time for the auto-brew, holding down the PROGRAM button while adjusting the clock.
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-md-6 col-xl-5 col-xxl-4">
+          <figure class="figure">
+            <img class="img-fluid" src="./images/storyboard-p5.jpg" alt="Indicator light on coffee machine lights up.">
+            <figcaption class="figure-caption">
+              She knows she successfully preset the brew because the indicator light lights up!
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="row px-md-3 px-lg-5 pt-3 justify-content-center">
+        <div class="col-md-6 col-xl-5 col-xxl-4">
+          <figure class="figure">
+            <img class="img-fluid" src="./images/storyboard-p6.jpg" alt="Susie sleeps.">
+            <figcaption class="figure-caption">
+              Susie rests easy knowing that her project is done and a hot cup of coffee is waiting for her when she
+              wakes up.
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-md-6 col-xl-5 col-xxl-4">
+          <figure class="figure">
+            <img class="img-fluid" src="./images/storyboard-p7.jpg" alt="A few moments later.">
+            <figcaption class="figure-caption">
+              A few moments later...
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-md-6 col-xl-5 col-xxl-4">
+          <figure class="figure">
+            <img class="img-fluid" src="./images/storyboard-p8.jpg" alt="Susie wakes up and coffee starts brewing.">
+            <figcaption class="figure-caption">
+              After 3 restful hours of sleep, Susie awakens to the wonderful aroma of fresh coffee brewing. For once,
+              she's
+              excited to get out of bed.
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-md-6 col-xl-5 col-xxl-4">
+          <figure class="figure">
+            <img class="img-fluid" src="./images/storyboard-p9.jpg" alt="Susie enjoys her coffee.">
+            <figcaption class="figure-caption">
+              Susie is happy because she gets to enjoy a hot cup of coffee first thing in the morning. She's ready to
+              start the day!
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="row px-md-3 px-lg-5 pt-3 justify-content-center">
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-white py-3">
+    <div class="container text-right">
+      <p class="mb-0">
+        That's the end!
+      </p>
+    </div>
+  </footer>
+
+</body>
+
 </html>
